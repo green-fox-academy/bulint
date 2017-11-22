@@ -1,0 +1,66 @@
+h3 {
+    color: #ff0099;
+    font-family: 'Vollkorn SC', serif;
+}
+
+h1 {
+    font-family: 'Vollkorn SC', serif;
+}
+
+h2 {
+    font-family: 'Vollkorn SC', serif;
+}
+
+body {
+    padding-right:10%;
+    padding-left:10%;
+    background-image: url("topography.png");
+    width: 800px;
+    margin: auto;
+}
+
+p {
+    font-family: Consolas, monaco, monospace;
+    font-size: 14px;
+  }
+
+nav {
+    background-color: #333333;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: 'Vollkorn SC', serif;
+}
+
+nav a {
+    color: #ff0099;
+    padding: 12px;
+    display: inline-block;
+    padding: 1em;
+    background-color: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+    background-image: url("icon.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 2em;
+    background-position-x: 2em;
+}
+
+.hvr-grow-rotate {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+    -webkit-transform: scale(1.1) rotate(4deg);
+    transform: scale(1.1) rotate(4deg);
+  }
