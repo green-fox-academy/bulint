@@ -1,0 +1,16 @@
+.content2:before{
+  content: "</p>"
+}
+
+.content:before{
+  content: "<p>"
+}
+
+#parent div:first-child{
+  font-size: 28;
+  color: #F4A720;
+}
+
+#parent div:nth-child(3){
+  margin-left: 19px;
+}
