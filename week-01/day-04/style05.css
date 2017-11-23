@@ -1,0 +1,22 @@
+h1 {
+  color: #FF6E5C;
+}
+
+h2 {
+  color: #8C38E4;
+}
+
+p {
+  margin-right: 60%;
+}
+
+ol {
+  text-decoration: underline;
+  color: #ff0099;
+  list-style: upper-roman;
+}
+
+#black {
+  text-decoration: underline;
+  color: black;
+}

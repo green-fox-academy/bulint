@@ -1,9 +1,9 @@
 .content2:before{
-  content: "</p>"
+  content: "</p>";
 }
 
 .content:before{
-  content: "<p>"
+  content: "<p>";
 }
 
 #parent div:first-child{
