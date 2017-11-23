@@ -1,0 +1,38 @@
+#parent div:first-child{
+  border-top: 16px solid;
+  border-color: #4285F4;
+  background-color: #E67676;
+}
+
+#parent div:nth-child(2){
+  background-color: #E67676;
+  margin-bottom: 6px;
+  border-bottom: 16px solid;
+  border-color: #4285F4;
+  }
+  
+#parent div:nth-child(3){
+  background-color: #A9E6E6;
+  border-top: 16px solid;
+  border-color: #4285F4;
+  }
+  
+#parent div:last-child{
+  border-bottom: 16px solid;
+  border-color: #4285F4;
+  background-color: #A9E6E6;
+}
+
+div {
+  width: 349px;
+  height: 128px;
+  border: 16px solid;
+  border-color: #4285F4;
+  border-bottom: none;
+  border-top: none;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  box-sizing: border-box;
+  padding-top: 2rem;
+}
