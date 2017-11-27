@@ -17,8 +17,9 @@ namespace exercise_06
 
             int hoursSpentCoding = (17 * 5) * 6;
             int workHoursInSemester = 17 * 52;
+            double percentage = hoursSpentCoding / (double)workHoursInSemester * 100;
 
-            Console.WriteLine(hoursSpentCoding / (double)workHoursInSemester);
+            Console.WriteLine("The percentage of the coding hours in the semester is " + percentage + "%");
             Console.WriteLine();
             Console.ReadLine();
 
