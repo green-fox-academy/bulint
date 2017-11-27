@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+  <meta charset="utf-8">
   <title>What does green fox say?</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
-<body>
+<body
+<main>
   <div class="mainbox">
   <form action="/greenfox" method="post">
     <header>
@@ -12,28 +16,43 @@
     </header>
     <div id="right_box">
       <div><h2>Kapcsolat</h2></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div>
+        <label for="name">Telefonszám</label><br>
+        <input type="text" id="telephone" name="user_name">
+      </div>
+      <div>
+        <label for="name">E-mail cím</label><br>
+        <input type="text" id="email" name="user_name">
+      </div>
+      <div>
+        <label for="name">Facebook profilod</label><br>
+        <input type="text" id="facebook" name="user_name">
+      </div>
+      <div>
+        <label for="name">Twitter profilod</label><br>
+        <input type="text" id="twitter" name="user_name">
+      </div>
+      <div>
+        <label for="name">Milyen házban laksz?</label><br>
+        <input type="text" id="house" name="user_name">
+      </div>
     </div>
     <div id="left_box">
-      <div><h2>Szemelyes adatok</h2></div>
+      <div><h2>Személyes adatok</h2></div>
       <div>
-        <label for="name">Nev:</label><br>
+        <label for="name">Név:</label><br>
         <input type="text" id="name" name="user_name">
       </div>
       <div class="inline">
-        <label for="born">Szuletesi eved:</label><br>
+        <label for="born">Születési éved:</label><br>
         <input type="number" id="born" name="user_born">
       </div>
       <div class="inline">
         <label for="radio_button">Nemed:</label><br>
         <input type="radio" id="radio_button" name="user_gender">
-        <label for="radio_button">Ferfi</label>
+        <label for="radio_button">Férfi</label>
         <input type="radio" id="radio_button" name="user_gender">
-        <label for="radio_button">No</label>
+        <label for="radio_button">Nő</label>
       </div>
       <div>
         <article>
@@ -63,9 +82,11 @@
       </div>
     </div>
     <footer>
-
+      <label for="name">Bemutatkozás</label><br>
+      <textarea rows="6" cols="70"></textarea>
     </footer>
   </form>
   </div>
+</main>
 </body>
 </html>
