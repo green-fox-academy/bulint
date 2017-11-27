@@ -18,7 +18,7 @@ namespace exercise_06
             int hoursSpentCoding = (17 * 5) * 6;
             int workHoursInSemester = 17 * 52;
 
-            Console.WriteLine();
+            Console.WriteLine(hoursSpentCoding / (double)workHoursInSemester);
             Console.WriteLine();
             Console.ReadLine();
 
