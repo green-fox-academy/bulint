@@ -15,7 +15,7 @@ namespace exercise_18
 
             Console.WriteLine("Give me a number");
             int number = Int32.Parse(Console.ReadLine());
-            if (number % 2 != 0 && number % number == 0 && number % 3 != 0 && number % 3 != 0 && number % 3 != 0)
+            if (number % 2 != 0)
             {
                 Console.WriteLine("The number is odd");
             }
