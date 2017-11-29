@@ -7,10 +7,10 @@ namespace String04
     {
         public static void Main(string[] args)
         {
-            string todoText = " - Buy milk\n";
-            todoText = todoText.Insert(0, "My todo:\n");
-            todoText = todoText.Insert(20, " - Download games\n");
-            todoText = todoText.Insert(37, " - Diablo\n");
+            string todoText = "\n - Buy milk";
+            todoText = todoText.Insert(0, "My todo:");
+            todoText = todoText.Insert(20, "\n - Download games");
+            todoText = todoText.Insert(38, "\n     - Diablo");
 
             // Add "My todo:" to the beginning of the todoText
             // Add " - Download games" to the end of the todoText
