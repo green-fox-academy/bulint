@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace String04
+namespace Strings04
 {
     class Program
     {
