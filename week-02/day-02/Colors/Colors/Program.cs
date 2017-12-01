@@ -26,6 +26,14 @@ namespace Colors
             jaggedArray[2] = new string[] { "orchid", "violet", "pink", "hot pink" };
 
             Console.ReadLine();
+
+            foreach (var item in jaggedArray)
+            {
+                foreach (var items in jaggedArray)
+                {
+                    Console.WriteLine(items);
+                }
+            }
         }
     }
 }
