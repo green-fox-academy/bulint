@@ -19,8 +19,9 @@ namespace SumAllElements
             for (int i = 0; i < ai.Length; i++)
             {
                 sum += ai[i];
-                Console.WriteLine(sum);
             }
+
+            Console.WriteLine(sum);
             Console.ReadLine();
         }
     }
