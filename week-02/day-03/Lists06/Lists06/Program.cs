@@ -10,7 +10,12 @@ namespace Lists06
             var list1 = new List<int> { 2, 4, 6, 8, 10, 12, 14, 16 };
             var list2 = new List<int> { 4, 8, 12, 16 };
             string result = String.Empty;
+            int checker = 0;
 
+            if (list2.Contains(0) && !list1.Contains(0))
+            {
+                checker += 1;
+            }
             for (int i = 0; i < list1.Count; i++)
             {
                 for (int j = 0; j < list2.Count; j++)
@@ -23,7 +28,7 @@ namespace Lists06
                 }
             }
 
-            if (int.Parse(result) == 0)
+            if (int.Parse(result) == 0 && checker == 0)
             {
                 Console.WriteLine(true);
             }
