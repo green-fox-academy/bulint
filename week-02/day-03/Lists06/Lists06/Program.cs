@@ -14,7 +14,13 @@ namespace Lists06
 
             if (list2.Contains(0) && !list1.Contains(0))
             {
-                checker += 1;
+                for (int i = 0; i < list1.Count; i++)
+                {
+                    if (!list1.Contains(i))
+                    {
+                        checker += i;
+                    }
+                }
             }
             for (int i = 0; i < list1.Count; i++)
             {
