@@ -26,15 +26,21 @@ namespace Lists06
                 }
             }
 
-            if (list2[0] == 0 && list2[1] == 0 && list2[2] == 0 && list2[3] == 0)
+            string result = String.Empty;
+
+            for (int i = 0; i < list2.Count; i++)
+            {
+                result += list2[i];
+            }
+
+            if (int.Parse(result) == 0)
             {
                 Console.WriteLine(true);
             }
             else
             {
-                Console.WriteLine();
+                Console.WriteLine(false);
             }
-
             Console.ReadLine();
         }
     }
