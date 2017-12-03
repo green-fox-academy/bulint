@@ -18,7 +18,7 @@ namespace Strings05
         {
             string result = String.Empty;
             char[] array = reverser.ToCharArray();
-            for (int i = 80; i > -1 ; i--)
+            for (int i = reverser.Length - 1; i > -1 ; i--)
             {
                 result += array[i];
             }
