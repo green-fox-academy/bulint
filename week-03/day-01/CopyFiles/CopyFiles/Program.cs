@@ -7,6 +7,16 @@ namespace CopyFiles
     {
         static void Main(string[] args)
         {
+            string path = @"C:\Users\L\Documents\doksi.txt";
+        }
+
+        static bool CopyFiles(string path)
+        {
+            string[] content = File.ReadAllLines(path);
+            using (StreamWriter outputFile = new StreamWriter(path + @"\doksika.txt", true))
+            {
+                outputFile.WriteLine(content);
+            }
 
         }
     }
