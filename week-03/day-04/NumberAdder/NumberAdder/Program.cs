@@ -11,16 +11,19 @@ namespace NumberAdder
         static void Main(string[] args)
         {
             int number = 5;
-            NumberAdder(number);
+            Console.WriteLine(NumberAdder(number));
+            Console.ReadLine();
         }
-        static int NumberAdder(int number)
+        public static int NumberAdder(int number)
         {
-            for (int i = 0; i < number; i++)
+            if (number == 0)
             {
-                int addedNumbers =+ number;
+                return 0;
             }
-            Console.WriteLine(number);
-            return NumberAdder(number);
+            else
+            {
+                return number += NumberAdder(number - 1);
+            }
         }
     }
 }
