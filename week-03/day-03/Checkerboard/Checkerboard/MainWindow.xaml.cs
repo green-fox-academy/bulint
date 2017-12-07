@@ -23,46 +23,46 @@ namespace Checkerboard
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
             int size = 50;
-            int x1 = 0;
-            int y1 = 0;
-            int x2 = 50;
-            int y2 = 0;
+            int xBlack = 0;
+            int yBlack = 0;
+            int xWhite = size;
+            int yWhite = 0;
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    Black(foxDraw, x1, y1, size);
-                    White(foxDraw, x2, y2, size);
-                    x1 += size * 2;
-                    x2 += size * 2;
+                    Black(foxDraw, xBlack, yBlack, size);
+                    White(foxDraw, xWhite, yWhite, size);
+                    xBlack += size * 2;
+                    xWhite += size * 2;
                 }
-                x1 = 0;
-                x2 = 0;
-                y1 += size;
-                y2 += size;
+                xBlack = 0;
+                xWhite = 0;
+                yBlack += size;
+                yWhite += size;
                 for (int l = 0; l < 5; l++)
                 {
-                    x1 += size;
-                    White(foxDraw, x2, y2, size);
-                    Black(foxDraw, x1, y1, size);
-                    x1 += size;
-                    x2 += size * 2;
+                    xBlack += size;
+                    White(foxDraw, xWhite, yWhite, size);
+                    Black(foxDraw, xBlack, yBlack, size);
+                    xBlack += size;
+                    xWhite += size * 2;
                 }
-                x1 = 0;
-                x2 = 50;
-                y1 += size;
-                y2 += size;
+                xBlack = 0;
+                xWhite = size;
+                yBlack += size;
+                yWhite += size;
             }
         }
-        public static void Black(FoxDraw foxDraw, int x1, int y1, int size)
+        public static void Black(FoxDraw foxDraw, int xBlack, int yBlack, int size)
         {
             foxDraw.FillColor(Colors.Black);
-            foxDraw.DrawRectangle(x1, y1, size, size);
+            foxDraw.DrawRectangle(xBlack, yBlack, size, size);
         }
-        public static void White(FoxDraw foxDraw, int x2, int y2, int size)
+        public static void White(FoxDraw foxDraw, int xWhite, int yWhite, int size)
         {
             foxDraw.FillColor(Colors.Crimson);
-            foxDraw.DrawRectangle(x2, y2, size, size);
+            foxDraw.DrawRectangle(xWhite, yWhite, size, size);
         }
     }
 }
