@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B711F3D9-8DB8-42B6-A688-DAEC27D23BD0}</ProjectGuid>
+    <ProjectGuid>{A1F38020-39C1-43C5-AF04-7AF0C25BE256}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BlogPost</RootNamespace>
-    <AssemblyName>BlogPost</AssemblyName>
+    <RootNamespace>Animal</RootNamespace>
+    <AssemblyName>Animal</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlogPost.cs" />
+    <Compile Include="Animal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
