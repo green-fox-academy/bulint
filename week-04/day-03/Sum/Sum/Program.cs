@@ -19,5 +19,17 @@ namespace Sum
             }
             return sum;
         }
+
+        public bool GetNull(List<int> list)
+        {
+            if (list == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
