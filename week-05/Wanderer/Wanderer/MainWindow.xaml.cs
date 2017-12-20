@@ -9,9 +9,11 @@ namespace Wanderer
         {
             InitializeComponent();
             FoxDraw foxDraw = new FoxDraw(canvas);
-            Map map = new Map(foxDraw);
+            ThereAintAThingICannotDraw map = new ThereAintAThingICannotDraw(foxDraw);
+            Hero hero = new Hero(foxDraw);
 
             map.GenerateMap();
+            hero.CreateHero();
         }
     }
 

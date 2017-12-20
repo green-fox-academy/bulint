@@ -3,52 +3,52 @@ using GreenFox;
 
 namespace Wanderer
 {
-    public class Map
+    public class ThereAintAThingICannotDraw
     {
         private Random random = new Random();
         private FoxDraw foxDraw;
         const int TableWidth = 10;
         const int TableHeight = 11;
-        private string floor;
-        private string wall;
+        private string floorImage;
+        private string wallImage;
         private int x = 0;
         private int y = 0;
+        private int[,] map;
 
-        public Map(FoxDraw foxDraw)
+        public ThereAintAThingICannotDraw(FoxDraw foxDraw)
         {
             this.foxDraw = foxDraw;
-            floor = "./Assets/floor.png";
-            wall = "./Assets/wall.png";
+            floorImage = "./Assets/floor.png";
+            wallImage = "./Assets/wall.png";
+            map = new int[,]
+            {
+                { 0, 0, 0, 1, 0, 1, 0, 0, 0, 0 },
+                { 0, 0, 0, 1, 0, 1, 0, 1, 1, 0 },
+                { 0, 1, 1, 1, 0, 1, 0, 1, 1, 0 },
+                { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 },
+                { 1, 1, 1, 1, 0, 1, 1, 1, 1, 0 },
+                { 0, 1, 0, 1, 0, 0, 0, 0, 1, 0 },
+                { 0, 1, 0, 1, 0, 1, 1, 0, 1, 0 },
+                { 0, 0, 0, 0, 0, 1, 1, 0, 1, 0 },
+                { 0, 1, 1, 1, 0, 0, 0, 0, 1, 0 },
+                { 0, 0, 0, 1, 0, 1, 1, 0, 1, 0 },
+                { 0, 1, 0, 1, 0, 1, 0, 0, 0, 0 }
+            };
         }
 
         public int[,] GenerateMap()
         {
-            int[,] map = new int[,]
-            {
-                {0, 0, 0, 1, 0, 1, 0, 0, 0, 0 },
-                {0, 0, 0, 1, 0, 1, 0, 1, 1, 0 },
-                {0, 1, 1, 1, 0, 1, 0, 1, 1, 0 },
-                {0, 0, 0, 0, 0, 1, 0, 0, 0, 0 },
-                {1, 1, 1, 1, 0, 1, 1, 1, 1, 0 },
-                {0, 1, 0, 1, 0, 0, 0, 0, 1, 0 },
-                {0, 1, 0, 1, 0, 1, 1, 0, 1, 0 },
-                {0, 0, 0, 0, 0, 1, 1, 0, 1, 0 },
-                {0, 1, 1, 1, 0, 0, 0, 0, 1, 0 },
-                {0, 0, 0, 1, 0, 1, 1, 0, 1, 0 },
-                {0, 1, 0, 1, 0, 1, 0, 0, 0, 0 }
-            };
-
             for (int i = 0; i < TableHeight; i++)
             {
                 for (int j = 0; j < TableWidth; j++)
                 {
                     if (map[i,j] == 0)
                     {
-                        foxDraw.AddImage(floor, x, y);
+                        foxDraw.AddImage(floorImage, x, y);
                     }
                     else
                     {
-                        foxDraw.AddImage(wall, x, y);
+                        foxDraw.AddImage(wallImage, x, y);
                     }
                     x += FoxDraw.TileSize;
                 }

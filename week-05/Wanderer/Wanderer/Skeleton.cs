@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wanderer
 {
-    class Skeleton
+    class Skeleton : Character
     {
     }
 }
