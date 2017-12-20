@@ -109,10 +109,16 @@
     <Content Include="Assets\hero-down.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Assets\hero-left.png" />
+    <Content Include="Assets\hero-left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Assets\hero-map.png" />
-    <Resource Include="Assets\hero-right.png" />
-    <Resource Include="Assets\hero-up.png" />
+    <Content Include="Assets\hero-right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\hero-up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Assets\skeleton.png" />
     <Resource Include="Assets\wall.png" />
   </ItemGroup>

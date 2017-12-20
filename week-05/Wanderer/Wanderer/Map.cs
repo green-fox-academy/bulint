@@ -3,7 +3,7 @@ using GreenFox;
 
 namespace Wanderer
 {
-    public class ThereAintAThingICannotDraw
+    public class Draw
     {
         private Random random = new Random();
         private FoxDraw foxDraw;
@@ -15,7 +15,7 @@ namespace Wanderer
         private int y = 0;
         private int[,] map;
 
-        public ThereAintAThingICannotDraw(FoxDraw foxDraw)
+        public Draw(FoxDraw foxDraw)
         {
             this.foxDraw = foxDraw;
             floorImage = "./Assets/floor.png";
