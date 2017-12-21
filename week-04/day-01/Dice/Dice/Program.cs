@@ -22,10 +22,10 @@ namespace Dice
                 while (diceList[l].GetCurrent(diceList[l]) != 6)
                 {
                     diceList[l].ReRoll();
+                    //Console.WriteLine(diceList[l].GetCurrent(diceList[l]));
                 }
                 Console.WriteLine(diceList[l].GetCurrent(diceList[l]));
             }
-
             Console.ReadLine();
         }
     }
