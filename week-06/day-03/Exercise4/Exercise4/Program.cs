@@ -30,7 +30,6 @@ namespace Exercise4
                 Console.WriteLine(n);
             }
 
-
             Console.ReadLine();
         }
     }
