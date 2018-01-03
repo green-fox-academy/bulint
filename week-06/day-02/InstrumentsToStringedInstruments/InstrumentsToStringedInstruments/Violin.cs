@@ -7,21 +7,23 @@ namespace InstrumentsToStringedInstruments
         public Violin(int numberOfStrings)
         {
             numberOfStrings = NumberOfStrings;
+            Name = "Violin";
         }
 
         public Violin()
         {
             NumberOfStrings = 4;
+            Name = "Violin";
         }
 
         public override void Play()
         {
-            Sound();
+            Console.WriteLine(Name + ", a " + NumberOfStrings + " stringed instrument that goes " + Sound());
         }
 
-        public override void Sound()
+        public override string Sound()
         {
-            Console.WriteLine("Screech");
+            return "Screech";
         }
     }
 }

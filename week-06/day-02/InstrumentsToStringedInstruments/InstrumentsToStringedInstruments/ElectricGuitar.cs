@@ -7,21 +7,23 @@ namespace InstrumentsToStringedInstruments
         public ElectricGuitar(int numberOfStrings)
         {
             numberOfStrings = NumberOfStrings;
+            Name = "Electric guitar";
         }
 
         public ElectricGuitar()
         {
             NumberOfStrings = 6;
+            Name = "Electric guitar";
         }
 
         public override void Play()
         {
-            Sound();
+            Console.WriteLine(Name + ", a " + NumberOfStrings + " stringed instrument that goes " + Sound());
         }
 
-        public override void Sound()
+        public override string Sound()
         {
-            Console.WriteLine("Twaang!");
+            return "Twang";
         }
     }
 }
