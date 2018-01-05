@@ -22,9 +22,8 @@ namespace Exercise5
                 from n in numbers
                 group n by n into g
                 select g;
-            Dictionary<int, int> frequenciesDictionary = frequenciesQuery.ToDictionary(n => n.Key, n => n.Count());
 
-            foreach (var f in frequenciesDictionary)
+            foreach (var f in frequenciesQuery.ToDictionary(n => n.Key, n => n.Count()))
             {
                 Console.WriteLine(f);
             }
