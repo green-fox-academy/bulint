@@ -10,13 +10,13 @@ namespace Exercise5
         {
             int[] numbers = new int[] { 5, 9, 1, 2, 3, 7, 5, 6, 7, 3, 7, 6, 8, 5, 4, 9, 6, 2 };
 
-            //var frequencies = numbers.GroupBy(n => n)
-            //    .ToDictionary(n => n.Key, n => n.Count());
+            var frequencies = numbers.GroupBy(n => n)
+                .ToDictionary(n => n.Key, n => n.Count());
 
-            //foreach (var f in frequencies)
-            //{
-            //    Console.WriteLine(f);
-            //}
+            foreach (var f in frequencies)
+            {
+                Console.WriteLine(f);
+            }
 
             var frequenciesQuery =
                 from n in numbers
