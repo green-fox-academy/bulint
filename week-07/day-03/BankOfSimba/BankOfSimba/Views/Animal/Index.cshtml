@@ -1,18 +1,65 @@
 ﻿@model BankOfSimba.ViewModels.AnimalViewModel
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" type="text/css" href="~/style.css">
     <title>Bank of animals</title>
 </head>
 <body>
-    <table>
+    <table align="center" style="width:100%">
+        @{ 
+            int id = 0;
+        }
         @foreach (var animal in @Model.AnimalsAccounts)
         {
+            id++;
             <tr>
+                <td>Id: @id</td>
                 <td>Name: @animal.Name</td>
                 <td>Balance: @animal.Balance @animal.Currency</td>
-                <td>AnimalType: @animal.AnimalType</td>
+                <td>Type of animal: @animal.AnimalType</td>
+                @if (animal.Name == "Simba")
+                {
+                    <td style="color: chartreuse">King</td>
+                }
+                else
+                {
+                    <td>Not a king</td>
+                }
+                @if (animal.IsGood)
+                {
+                    <td>Good guy</td>
+                }
+                else
+                {
+                    <td>Bad guy</td>
+                }
             </tr>
         }
     </table>
+    <form action="/add" method="post">
+        Name:
+        <input type="text" name="Name" value="">
+        <br />
+        Balance:
+        <input type="text" name="Balance" value="">
+        <br />
+        What kind of animal is it?:
+        <input type="text" name="AnimalType" value="">
+        <br />
+        Currency:
+        <input type="text" name="AnimalType" value="">
+        <br />
+        Is it a king?
+        <input type="radio" name="IsKing" value="Yeah">
+        Or not a king?
+        <input type="radio" name="IsKing" value="Nope">
+        <br />
+        Is it a good guy?
+        <input type="radio" name="IsKing" value="Yeah">
+        Is it a bad guy?
+        <input type="radio" name="IsKing" value="Nope">
+        <br />
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>

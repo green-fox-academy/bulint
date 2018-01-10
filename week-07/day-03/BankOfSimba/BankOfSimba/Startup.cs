@@ -18,6 +18,7 @@ namespace BankOfSimba
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }

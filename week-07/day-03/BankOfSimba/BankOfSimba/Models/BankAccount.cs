@@ -6,5 +6,6 @@
         public double Balance { get; set; }
         public string AnimalType { get; set; }
         public string Currency { get; set; }
+        public bool IsGood { get; set; }
     }
 }

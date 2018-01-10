@@ -5,7 +5,7 @@ namespace BankOfSimba.ViewModels
 {
     public class AnimalViewModel
     {
-        public List<BankAccount> AnimalsAccounts { get; set; } = new List<BankAccount>();
+        public List<BankAccount> AnimalsAccounts = new List<BankAccount>();
 
         public AnimalViewModel()
         {
@@ -18,40 +18,45 @@ namespace BankOfSimba.ViewModels
             {
                 Name = "Simba",
                 Balance = 2000.00,
-                AnimalType = "Animal.Lion",
-                Currency = "Zebra"
+                AnimalType = "Lion",
+                Currency = "Zebra",
+                IsGood = true
             });
 
             AnimalsAccounts.Add(new BankAccount()
             {
                 Name = "Scar",
                 Balance = 666.00,
-                AnimalType = "Animal.Lion",
-                Currency = "Zebra"
+                AnimalType = "Lion",
+                Currency = "Zebra",
+                IsGood = false
             });
 
             AnimalsAccounts.Add(new BankAccount()
             {
                 Name = "Mufasa",
                 Balance = 1500.00,
-                AnimalType = "Animal.Lion",
-                Currency = "Zebra"
+                AnimalType = "Lion",
+                Currency = "Zebra",
+                IsGood = true
             });
 
             AnimalsAccounts.Add(new BankAccount()
             {
                 Name = "Zazu",
                 Balance = 3000.00,
-                AnimalType = "Animal.RedBilledHornbill",
-                Currency = "Zebra"
+                AnimalType = "Red Billed Hornbill",
+                Currency = "Zebra",
+                IsGood = true
             });
 
             AnimalsAccounts.Add(new BankAccount()
             {
                 Name = "Timon",
                 Balance = 10.00,
-                AnimalType = "Animal.Meerkat",
-                Currency = "Zebra"
+                AnimalType = "Meerkat",
+                Currency = "Zebra",
+                IsGood = true
             });
         }
 
