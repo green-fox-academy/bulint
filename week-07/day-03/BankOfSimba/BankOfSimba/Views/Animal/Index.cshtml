@@ -1,0 +1,18 @@
+﻿@model BankOfSimba.ViewModels.AnimalViewModel
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bank of animals</title>
+</head>
+<body>
+    <table>
+        @foreach (var animal in @Model.AnimalsAccounts)
+        {
+            <tr>
+                <td>Name: @animal.Name</td>
+                <td>Balance: @animal.Balance @animal.Currency</td>
+                <td>AnimalType: @animal.AnimalType</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
