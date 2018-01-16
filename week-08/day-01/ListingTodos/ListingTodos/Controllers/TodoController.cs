@@ -16,9 +16,9 @@ namespace ListingTodos.Controllers
 
         [Route("")]
         [Route("list")]
-        public IActionResult List()
+        public IActionResult List(Todo todo)
         {
-            return View(todoRepo.GetList());
+            return View(todoRepo.GetList(todo));
         }
     }
 }

@@ -15,14 +15,15 @@ namespace ListingTodos.Repositories
 
         //public List<Todo> todoList = new List<Todo>()
         //{
-        //    new Todo(){Title = "Start a new day"},
-        //    new Todo(){Title = "Finish H2 workshop1"},
-        //    new Todo(){Title = "Finish JPA workshop2"},
-        //    new Todo(){Title = "Create a CRUD project"},
+        //    new Todo() {Title = "Start a new day"},
+        //    new Todo() {Title = "Finish H2 workshop1"},
+        //    new Todo() {Title = "Finish JPA workshop2"},
+        //    new Todo() {Title = "Create a CRUD project"},
         //};
 
-        public List<Todo> GetList()
+        public List<Todo> GetList(Todo todo)
         {
+            todoContext.Todos.Add(todo);
             return todoContext.Todos.ToList();
         }
     }

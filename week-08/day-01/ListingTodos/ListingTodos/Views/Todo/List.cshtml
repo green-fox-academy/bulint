@@ -1,17 +1,27 @@
-﻿@model List<ListingTodos.Todo>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+@model List<ListingTodos.Todo>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta charset="utf-8" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
     <h1>Todos for today:</h1>
+    <form action="" method="post">
+        <button>Add new todo</button>
+        Thing to do:
+        <input type="text" name="firstname">
+        Urgent?:
+        <input type="text" name="lastname">
+    </form>
     <ul>
         @foreach (var item in @Model)
         {
             <li> @item.Title </li>
         }
     </ul>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
