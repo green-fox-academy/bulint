@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+@model List<ListingTodos.Todo>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+    <link href="~/style.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <form action="/newtodo" method="post">
+        <p>Fill the boxes and press the button to add a new todo to the list!</p><br>
+        <input type="text" name="Title" placeholder="Thing to do" /><br>
+        <input type="text" name="IsUrgent" placeholder="Urgent?" /><br>
+        <input type="text" name="IsDone" placeholder="Done?" /><br>
+        <button type="submit" class="btn btn-danger">Add</button>
+    </form>
+</body>
+</html>

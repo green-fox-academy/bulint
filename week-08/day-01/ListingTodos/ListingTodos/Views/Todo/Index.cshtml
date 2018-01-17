@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+@model List<ListingTodos.Todo>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+    <link href="~/style.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <h1 class="todos4today">Todos for today:</h1>
+        <form action="/add" method="post">
+            <div class="addnewtodo">
+                <button type="submit" class="btn btn-danger">Add new todo</button>
+            </div>
+        </form>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>URGENT</th>
+            <th>DONE</th>
+            <th></th>
+            <th></th>
+        </tr>
+        @foreach (var element in Model)
+        {
+        <tr>
+            <td> @element.Id </td>
+            <td> @element.Title </td>
+            <td> @element.IsUrgent </td>
+            <td> @element.IsDone </td>
+            <td>
+                <form class="delbtn" action="/delete?Id=@element.Id" method="post">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+            <td>
+                <form class="delbtn" action="/@element.Id" method="get">
+                    <button type="submit" class="btn btn-danger">Edit</button>
+                </form>
+            </td>
+        </tr>
+        }
+    </table>
+</body>
+</html>

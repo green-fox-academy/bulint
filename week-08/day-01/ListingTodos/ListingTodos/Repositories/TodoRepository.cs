@@ -21,10 +21,27 @@ namespace ListingTodos.Repositories
         //    new Todo() {Title = "Create a CRUD project"},
         //};
 
-        public List<Todo> GetList(Todo todo)
+        public void Add(Todo todo)
         {
             todoContext.Todos.Add(todo);
+            todoContext.SaveChanges();
+        }
+
+        public void Delete(long id)
+        {
+            Todo todo = todoContext.Todos.FirstOrDefault(x => x.Id == id);
+            todoContext.Todos.Remove(todo);
+            todoContext.SaveChanges();
+        }
+
+        public List<Todo> GetList()
+        {
             return todoContext.Todos.ToList();
+        }
+
+        public Todo Edit(Todo todo)
+        {
+            return todo;
         }
     }
 }

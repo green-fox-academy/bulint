@@ -1,0 +1,37 @@
+﻿body {
+    background-color: forestgreen;
+    padding: 10px;
+    color: beige;
+    font-family: 'Macondo', cursive;
+}
+
+form {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+input {
+    margin-right: 10px;
+    color: black;
+    border-radius: 5px;
+    background-color: beige;
+    border: 1px solid transparent;
+}
+
+::-webkit-input-placeholder {
+    color: forestgreen;
+}
+
+.delbtn {
+    padding-bottom: 0;
+}
+
+.addnewtodo {
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.todos4today {
+    margin: auto;
+    border: 1px solid;
+}
