@@ -4,12 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet" />
     <link href="~/style.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
-    <h1 class="todos4today">Todos for today:</h1>
+    <div class="todos4today">
+        <h1>Todos for today:</h1>
+    </div>
         <form action="/add" method="post">
             <div class="addnewtodo">
                 <button type="submit" class="btn btn-danger">Add new todo</button>
@@ -37,7 +39,7 @@
                 </form>
             </td>
             <td>
-                <form class="delbtn" action="/@element.Id" method="get">
+                <form class="delbtn" action="/edit/@element.Id" method="get">
                     <button type="submit" class="btn btn-danger">Edit</button>
                 </form>
             </td>

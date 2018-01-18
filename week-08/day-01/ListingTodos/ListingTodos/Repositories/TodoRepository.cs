@@ -39,9 +39,18 @@ namespace ListingTodos.Repositories
             return todoContext.Todos.ToList();
         }
 
-        public Todo Edit(Todo todo)
+        public Todo GetTodo(long id)
         {
+            Todo todo = todoContext.Todos.FirstOrDefault(x => x.Id == id);
             return todo;
+        }
+
+        public void ChangeTodo(long id, Todo newTodo)
+        {
+            todoContext.Todos.FirstOrDefault(x => x.Id == id).Title = newTodo.Title;
+            todoContext.Todos.FirstOrDefault(x => x.Id == id).IsDone = newTodo.IsDone;
+            todoContext.Todos.FirstOrDefault(x => x.Id == id).IsUrgent = newTodo.IsUrgent;
+            todoContext.SaveChanges();
         }
     }
 }

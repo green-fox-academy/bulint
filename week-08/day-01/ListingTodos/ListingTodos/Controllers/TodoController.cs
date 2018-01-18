@@ -40,16 +40,16 @@ namespace ListingTodos.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet("{id}")]
-        public IActionResult Edit()
+        [HttpGet("edit/{id}")]
+        public IActionResult Edit(long id)
         {
-            return View(todoRepo.GetList());
+            return View(todoRepo.GetTodo(id));
         }
 
-        [HttpPost("{id}")]
-        public IActionResult EditTodo(Todo todo)
+        [HttpPost("edit/{id}")]
+        public IActionResult EditTodo(long id, Todo todo)
         {
-            todoRepo.Edit(todo);
+            todoRepo.ChangeTodo(id, todo);
             return RedirectToAction("Index");
         }
     }
