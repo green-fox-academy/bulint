@@ -8,5 +8,7 @@ namespace Rest.Models
     public class SuchModel
     {
         public int? Until { get; set; }
+        public int[] Numbers { get; set; }
+        public string What { get; set; }
     }
 }

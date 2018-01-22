@@ -62,12 +62,7 @@ namespace Rest.Controllers
                 return Json(new { error = "Please provide a number!" });
             }
 
-            if (what.Equals(null))
-            {
-                return Json(new { error = "Stop nagging me!" });
-            }
-
-            if (what.Equals("sum"))
+            else if (what.Equals("sum"))
             {
                 int sum = 0;
 
@@ -78,8 +73,7 @@ namespace Rest.Controllers
 
                 return Json(new { until = model.Until, result = sum });
             }
-
-            if (what.Equals("factor"))
+            else if (what.Equals("factor"))
             {
                 int factor = 1;
 
@@ -90,8 +84,58 @@ namespace Rest.Controllers
 
                 return Json(new { until = model.Until, result = factor });
             }
+            else
+            {
+                return Json(new { error = "Please provide what to do with the numbers!" });
+            }
+        }
 
-            return Json("Yoo teso");
+        [HttpPost("arrays")]
+        public IActionResult Arrays([FromBody] SuchModel model)
+        {
+
+            if (model.Numbers == null)
+            {
+                return Json(new { error = "Please provide the numbers!" });
+            }
+
+            if (model.What.Equals("sum"))
+            {
+                int sum = 0;
+
+                foreach (var number in model.Numbers)
+                {
+                    sum += number;
+                }
+
+                return Json(new { result = sum });
+            }
+            else if (model.What.Equals("multiply"))
+            {
+                int multiplied = 1;
+
+                foreach (var number in model.Numbers)
+                {
+                    multiplied *= number;
+                }
+
+                return Json(new { result = multiplied });
+            }
+            else if (model.What.Equals("double"))
+            {
+                int[] doubled = model.Numbers;
+
+                for (int i = 0; i < model.Numbers.Length; i++)
+                {
+                    doubled[i] = model.Numbers[i] * 2;
+                }
+
+                return Json(new { result = doubled });
+            }
+            else
+            {
+                return Json(new { error = "Please provide what to do with the numbers!" });
+            }
         }
     }
 }
