@@ -17,9 +17,9 @@ namespace Rest.Controllers
         }
 
         [HttpGet("doubling")]
-        public IActionResult Doubling(int? input)
+        public IActionResult Doubling(int input)
         {
-            if (input == null)
+            if (input == 0)
             {
                 return Json(new { error = "Please provide an input!" });
             }
@@ -56,7 +56,6 @@ namespace Rest.Controllers
         [HttpPost("dountil/{what}")]
         public IActionResult DoUntil([FromRoute] string what, [FromBody] SuchModel model)
         {
-
             if (model.Until == null)
             {
                 return Json(new { error = "Please provide a number!" });
