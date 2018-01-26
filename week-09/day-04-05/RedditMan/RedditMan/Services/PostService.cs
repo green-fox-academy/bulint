@@ -1,9 +1,6 @@
 ﻿using RedditMan.Models;
 using RedditMan.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RedditMan.Services
 {
@@ -19,6 +16,11 @@ namespace RedditMan.Services
         public List<Post> GetList()
         {
             return postRepository.GetList();
+        }
+
+        public Post Add(Post post)
+        {
+            return postRepository.Add(post);
         }
     }
 }

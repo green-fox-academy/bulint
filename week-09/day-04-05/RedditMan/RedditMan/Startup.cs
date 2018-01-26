@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using RedditMan.Entities;
-using RedditMan.Models;
 using RedditMan.Repositories;
+using RedditMan.Services;
 
 namespace RedditMan
 {
@@ -22,6 +17,7 @@ namespace RedditMan
             services.AddMvc();
             services.AddDbContext<PostContext>(options => options.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Reddit; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True;"));
             services.AddScoped<PostRepository>();
+            services.AddScoped<PostService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,28 +1,37 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RedditMan.Models;
-using RedditMan.Repositories;
 using RedditMan.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RedditMan.Controllers
 {
     [Route("")]
     public class PostsController : Controller
     {
-        private PostRepository postRepo;
+        private PostService postService;
 
-        public PostsController(PostRepository postRepo)
+        public PostsController(PostService postService)
         {
-            this.postRepo = postRepo;
+            this.postService = postService;
         }
 
         [HttpGet("posts")]
         public IActionResult ListPosts()
         {
-            return Json(new { posts = postRepo.GetList() });
+            return Json(new { posts = postService.GetList() });
+        }
+
+        [HttpPost("posts")]
+        public IActionResult AddPosts([FromBody]Post post)
+        {
+            var postJson = postService.Add(post);
+            return Json(new
+            {
+                id = postJson.Id,
+                title = postJson.Title,
+                url = postJson.Url,
+                timeStamp = postJson.TimeStamp,
+                score = postJson.Score
+            });
         }
     }
 }
