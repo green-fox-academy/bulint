@@ -10,6 +10,6 @@ namespace OrientationRetakeExam.Entities
 
         }
 
-        DbSet<Clothing> Clothes { get; set; }
+        public DbSet<Clothing> Clothes { get; set; }
     }
 }

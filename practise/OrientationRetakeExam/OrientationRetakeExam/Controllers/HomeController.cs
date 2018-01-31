@@ -1,13 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OrientationRetakeExam.Reporitories;
+using OrientationRetakeExam.Services;
 
 namespace OrientationRetakeExam.Controllers
 {
+    [Route("")]
     public class HomeController : Controller
     {
+        private ClothesService clothesService;
+
+        public HomeController(ClothesService clothesService)
+        {
+            this.clothesService = clothesService;
+        }
+
         [HttpGet("warehouse")]
         public IActionResult Warehouse()
         {
-            return Ok();
+            return View(clothesService.GetViewModel());
         }
 
         [HttpPost("warehouse/summary")]

@@ -1,7 +1,46 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model OrientationRetakeExam.ViewModels.ClothesViewModel
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    <title></title>
+    <meta charset="utf-8" />
+    <title>Green Fox Fashion Web Store</title>
 </head>
 <body>
+    <h2>Green Fox Fashion Web Store</h2>
+    <select name="Select item name">
+        <option>Select item name</option>
+        @foreach (var name in Model.UniqueNames)
+        {
+            <option value="@name">@name</option>
+        }
+    </select>
+    <select name="Select size">
+        <option>Select size</option>
+        @foreach (var size in Model.UniqueSizes)
+        {
+            <option value="@size">@size</option>
+        }
+    </select>
+    <input type="text" />
+    <button type="submit">GET TOTAL</button>
+    <table>
+        <tr style="font-weight: bold">
+            <td>ITEM NAME</td>
+            <td>MANUFACTURER</td>
+            <td>CATEGORY</td>
+            <td>SIZE</td>
+            <td>UNIT PRICE</td>
+        </tr>
+        @foreach (var clothing in Model.AllClothes)
+        {
+        <tr>
+            <td>@clothing.ItemName>
+            <td>@clothing.Manufacturer</td>
+            <td>@clothing.Category</td>
+            <td>@clothing.Size</td>
+            <td>@clothing.UnitPrice</td>
+        </tr>
+        }
+    </table>
 </body>
 </html>
