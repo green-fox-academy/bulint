@@ -1,24 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using PallidaOrientationExam.Services;
 
 namespace PallidaOrientationExam.Controllers
 {
     [Route("")]
     public class CarController : Controller
     {
-        [HttpGet("search")]
-        public IActionResult Search()
+        private CarService carService;
+
+        public CarController(CarService carService)
         {
-            return Ok();
+            this.carService = carService;
+        }
+
+        [HttpGet("search")]
+        public IActionResult Search([FromQuery]string q, string police, string diplomat)
+        {
+            return View(carService.GetFilteredCars(q, police, diplomat));
         }
 
         [HttpGet("search/{brand}")]
-        public IActionResult Brand()
+        public IActionResult Brand([FromRoute]string brand)
         {
-            return Ok();
+            return View("Search", carService.GetCarsByBrand(brand));
         }
     }
 }

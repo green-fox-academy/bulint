@@ -1,0 +1,35 @@
+﻿@model List<PallidaOrientationExam.Models.Car>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Harry Potter movies kinda suck</title>
+</head>
+<body>
+    <a href="search?police=1">Police cars only</a>
+    <a href="search?diplomat=1">Diplomats only</a>
+    <form action="/search" method="get">
+        <input type="text" name="q" />
+        <button>Search</button>
+        <table>
+            <tr style="font-weight: bold">
+                <td>Licence Plate</td>
+                <td>Brand</td>
+                <td>Model</td>
+                <td>Color</td>
+                <td>Year</td>
+            </tr>
+            @foreach (var car in Model)
+            {
+                <tr>
+                    <td>@car.LicencePlate</td>
+                    <td><a href="search/@car.Brand">@car.Brand</a></td>
+                    <td>@car.Model</td>
+                    <td>@car.Color</td>
+                    <td>@car.Year</td>
+                </tr>
+            }
+        </table>
+    </form>
+</body>
+</html>
