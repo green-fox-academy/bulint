@@ -7,22 +7,24 @@
 </head>
 <body>
     <h2>Green Fox Fashion Web Store</h2>
-    <select name="Select item name">
-        <option>Select item name</option>
-        @foreach (var name in Model.UniqueNames)
-        {
-            <option value="@name">@name</option>
-        }
-    </select>
-    <select name="Select size">
-        <option>Select size</option>
-        @foreach (var size in Model.UniqueSizes)
-        {
-            <option value="@size">@size</option>
-        }
-    </select>
-    <input type="text" />
-    <button type="submit">GET TOTAL</button>
+    <form action="/warehouse/summary" method="post">
+        <select name="ItemName">
+            <option>Select item name</option>
+            @foreach (var name in Model.UniqueNames)
+            {
+                <option name="ItemName" value="@name">@name</option>
+            }
+        </select>
+        <select name="Size">
+            <option>Select size</option>
+            @foreach (var size in Model.UniqueSizes)
+            {
+                <option name="Size" value="@size">@size</option>
+            }
+        </select>
+        <input type="text" name="Amount" placeholder="Amount"/>
+        <button type="submit">GET TOTAL</button>
+    </form>
     <table>
         <tr style="font-weight: bold">
             <td>ITEM NAME</td>
@@ -33,13 +35,13 @@
         </tr>
         @foreach (var clothing in Model.AllClothes)
         {
-        <tr>
-            <td>@clothing.ItemName>
-            <td>@clothing.Manufacturer</td>
-            <td>@clothing.Category</td>
-            <td>@clothing.Size</td>
-            <td>@clothing.UnitPrice</td>
-        </tr>
+            <tr>
+                <td>@clothing.ItemName</td>
+                <td>@clothing.Manufacturer</td>
+                <td>@clothing.Category</td>
+                <td>@clothing.Size</td>
+                <td>@clothing.UnitPrice</td>
+            </tr>
         }
     </table>
 </body>

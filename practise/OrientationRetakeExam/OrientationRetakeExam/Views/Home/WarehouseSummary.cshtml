@@ -1,10 +1,20 @@
-﻿<!DOCTYPE html>
+﻿@model OrientationRetakeExam.Models.Clothing
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Green Fox Fashion Web Store</title>
 </head>
 <body>
-    <h2>Green Fox Fashion Web Store</h2>
+    <table>
+        <tr>
+            <td>Name: @Model.Id</td>
+            <td>Name: @Model.ItemName</td>
+            <td>Name: @Model.Manufacturer</td>
+            <td>Name: @Model.Size</td>
+            <td>Name: @Model.Category</td>
+            <td>Name: @Model.UnitPrice</td>
+        </tr>
+    </table>
 </body>
 </html>

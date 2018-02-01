@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OrientationRetakeExam.Reporitories;
 using OrientationRetakeExam.Services;
 
 namespace OrientationRetakeExam.Controllers
@@ -21,9 +20,9 @@ namespace OrientationRetakeExam.Controllers
         }
 
         [HttpPost("warehouse/summary")]
-        public IActionResult WarehouseSummary()
+        public IActionResult WarehouseSummary(long id, int amount)
         {
-            return Ok();
+            return View(clothesService.SelectedItem(id, amount));
         }
 
         [HttpGet("warehouse/query")]

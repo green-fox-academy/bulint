@@ -1,9 +1,5 @@
 ﻿using OrientationRetakeExam.Models;
-using OrientationRetakeExam.Reporitories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace OrientationRetakeExam.ViewModels
 {

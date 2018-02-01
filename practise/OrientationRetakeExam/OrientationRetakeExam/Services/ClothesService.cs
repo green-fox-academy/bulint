@@ -54,5 +54,10 @@ namespace OrientationRetakeExam.Services
                 UniqueSizes = DropdownSizeFilterer(clothesRepository.GetList())
             };
         }
+
+        public Clothing SelectedItem(long id, int amount)
+        {
+            return clothesRepository.RepoSelectedItem(id, amount);
+        }
     }
 }
